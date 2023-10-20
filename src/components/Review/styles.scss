@@ -1,0 +1,16 @@
+textarea {
+	resize: none;
+	outline: none;
+
+	width: 100%;
+	padding: 10px 18px;
+
+	border: none;
+	border-radius: var(--border-1);
+	box-shadow: var(--shadow);
+
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 15px;
+	letter-spacing: -0.4px;
+}

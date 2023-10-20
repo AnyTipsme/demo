@@ -1,0 +1,52 @@
+.success-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	padding-inline: 16px;
+
+	.success-mark {
+		// translate: 0 -25%;
+	}
+}
+
+$font-size: 70px;
+
+.thank-you {
+	white-space: nowrap;
+	font-family: 'Red Hat Display';
+	font-weight: 400;
+	font-size: $font-size;
+	line-height: 60px;
+	color: var(--black);
+
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-bottom: $font-size;
+
+	&::after {
+		content: 'You';
+		translate: 0 100%;
+	}
+}
+
+.success-mark {
+	position: relative;
+	padding-right: 70px;
+	translate: 0 -25%;
+	img {
+		width: 122px;
+
+		aspect-ratio: 1;
+		border-radius: 50%;
+	}
+	&::after {
+		content: url('../../assets/success-mark.svg');
+		position: absolute;
+		left: 70px;
+		top: 50px;
+		z-index: -1;
+	}
+}

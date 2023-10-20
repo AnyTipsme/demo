@@ -1,0 +1,16 @@
+.frame {
+	padding: 10px 25px;
+	border-radius: var(--border-1);
+	box-shadow: var(--shadow);
+	background: var(--white);
+	border: 1px solid var(--neutral-75);
+}
+
+.frame.primary {
+	background: var(--main-light);
+	border: none;
+}
+
+.frame.secondary {
+	background: var(--neutral-100);
+}

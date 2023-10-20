@@ -1,0 +1,56 @@
+@use '../../styles/mixins';
+
+.saving-card {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+	gap: min(50px, 100%);
+	@include mixins.Pointer;
+
+	h2 {
+		font-family: 'Poppins';
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 1.2;
+		color: var(--black);
+	}
+
+	p {
+		font-family: 'Poppins';
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 21px;
+		letter-spacing: -0.4px;
+		color: var(--neutral-400);
+	}
+
+	span {
+		display: block;
+		margin-bottom: 3px;
+
+		font-family: 'Poppins';
+		font-weight: 500;
+		font-size: 11px;
+		line-height: 16px;
+		letter-spacing: -0.4px;
+		color: var(--neutral-300);
+	}
+
+	img {
+		width: 60px;
+		aspect-ratio: 1;
+		border-radius: 50%;
+	}
+}
+
+.progress {
+	overflow: hidden;
+	height: 4px;
+	border-radius: var(--border-1);
+	background: var(--white);
+	& > div {
+		height: 100%;
+		background: var(--main-dark);
+		border-radius: inherit;
+	}
+}

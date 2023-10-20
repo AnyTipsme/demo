@@ -1,0 +1,11 @@
+.heading {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+	padding-block: 20px;
+
+	img {
+		width: 100%;
+		margin-left: 8px;
+	}
+}

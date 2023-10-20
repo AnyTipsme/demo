@@ -1,0 +1,35 @@
+html {
+	box-sizing: border-box;
+}
+
+* {
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+
+	font-family: 'Inter', sans-serif;
+}
+
+body {
+	background: #e6f0fd;
+}
+
+li {
+	list-style: none;
+}
+
+.main-container {
+	display: flex;
+	flex-direction: column;
+
+	width: min(100%, 390px);
+	height: 100dvh;
+	padding-inline: 18px;
+	margin-inline: auto;
+
+	background: var(--white);
+
+	.page-content {
+		min-height: min(573.87px, 100%);
+	}
+}

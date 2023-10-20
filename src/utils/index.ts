@@ -1,0 +1,1 @@
+export { buildClass } from './buildClass'

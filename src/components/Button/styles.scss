@@ -1,0 +1,33 @@
+@use '../../styles/mixins';
+
+.button {
+	outline: none;
+	border: none;
+
+	width: 100%;
+	padding: 16px;
+	background: var(--neutral-100);
+	border-radius: var(--border-3);
+
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 15px;
+
+	@include mixins.Pointer;
+}
+
+.button.filled {
+	background: var(--main-dark);
+	color: var(--white);
+}
+
+.button.content {
+	width: fit-content;
+}
+
+.button.bold {
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 18px;
+	letter-spacing: -0.4px;
+}

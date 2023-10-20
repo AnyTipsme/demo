@@ -1,0 +1,15 @@
+@mixin Pointer {
+	transition: scale 0.2s ease-in-out;
+	&:active {
+		scale: 0.99;
+	}
+	@media (min-width: 768px) {
+		cursor: pointer;
+	}
+}
+
+@mixin ColorChange {
+	transition:
+		background 0.2s ease-in-out,
+		color 0.2s ease-in-out;
+}
