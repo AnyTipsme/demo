@@ -1,17 +1,16 @@
 import { createHashRouter, RouterProvider } from 'react-router-dom'
-import { Home, TypeInTips, Success } from './pages'
-import { Heading, PoweredBy } from './components'
+
 import { Provider } from './utils/GlobalContext'
+
+import { Home, Success } from './pages'
+import { Heading } from './components'
+
 import './styles/index.scss'
 
 const router = createHashRouter([
 	{
 		path: '*',
 		element: <Home />
-	},
-	{
-		path: '/type-in-tips',
-		element: <TypeInTips />
 	},
 	{
 		path: '/success',
@@ -21,13 +20,12 @@ const router = createHashRouter([
 
 function App() {
 	return (
-		<Provider>
-			<div className='main-container'>
+		<Provider >
+			<div className='main-container' >
 				<Heading />
 				<RouterProvider router={router} />
-				<PoweredBy />
-			</div>
-		</Provider>
+			</div >
+		</Provider >
 	)
 }
 

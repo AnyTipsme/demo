@@ -1,0 +1,22 @@
+.type-in-tips {
+	display: flex;
+	justify-content: space-between;
+
+	input {
+		outline: none;
+
+		text-align: center;
+
+		border: none;
+		border-radius: var(--border-2);
+
+		color: var(--neutral-350);
+		background-color: var(--bg-light);
+		box-shadow: var(--shadow);
+
+		font-weight: 600;
+		font-size: 15px;
+		line-height: 18.15px;
+		letter-spacing: -0.4px;
+	}
+}

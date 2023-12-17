@@ -4,19 +4,22 @@
 
 	--main-light: #c9dcfccc;
 	--main-dark: #0f2448;
+	--bg-light: #f8f8f8;
 
 	--neutral-50: #f3f3f3;
 	--neutral-75: #f5f5f5;
 	--neutral-100: #eaeaea;
 	--neutral-200: #9facc2;
 	--neutral-300: #3f4a63;
+	--neutral-350: #10234B;
 	--neutral-400: #040c22;
 
 	--border-1: 14px;
 	--border-2: 24px;
 	--border-3: 5px;
 
-	--shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+	--shadow: 0 2px 4px 0 #00000040;
+
 }
 
 :root {

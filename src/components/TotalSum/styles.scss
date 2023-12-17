@@ -1,0 +1,22 @@
+.total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 16px;
+
+  color: var(--neutral-400);
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.94px;
+
+  &__sum {
+    margin-top: 3px;
+    margin-bottom: 13px;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24.2px;
+  }
+}

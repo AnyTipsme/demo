@@ -1,0 +1,34 @@
+@use '../../styles/mixins';
+
+.tips-button {
+  overflow: hidden;
+  width: 58px;
+  aspect-ratio: 58 / 50;
+
+  border-radius: var(--border-2);
+  box-shadow: var(--shadow);
+
+  @include mixins.Pointer;
+
+  span {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 12px;
+    text-align: center;
+    letter-spacing: -0.4px;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+
+    @include mixins.ColorChange;
+  }
+}

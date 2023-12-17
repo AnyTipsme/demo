@@ -1,24 +1,31 @@
 @use '../../styles/mixins';
 
 .button {
-	outline: none;
-	border: none;
+  outline: none;
+  border: none;
 
-	width: 100%;
-	padding: 16px;
-	background: var(--neutral-100);
-	border-radius: var(--border-3);
+  width: 100%;
+  padding: 16px;
+  background-color: var(--bg-light);
+  border-radius: var(--border-3);
+  color: var(--neutral-350);
 
-	font-weight: 600;
-	font-size: 12px;
-	line-height: 15px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
 
-	@include mixins.Pointer;
+  @include mixins.Pointer;
+
+  &:disabled {
+    & svg > path {
+      fill-opacity: 0.3;
+    }
+  }
 }
 
 .button.filled {
-	background: var(--main-dark);
-	color: var(--white);
+  background: var(--main-dark);
+  color: var(--white);
 }
 
 .button.content {
@@ -26,8 +33,8 @@
 }
 
 .button.bold {
-	font-weight: 600;
-	font-size: 15px;
-	line-height: 18px;
-	letter-spacing: -0.4px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.4px;
 }

@@ -1,18 +1,15 @@
-import { useContext } from 'react'
-import { SavingCard, Tips, Rate, Review, Payment, SaveNatural } from '../../components'
+import { SavingCard, Tips, Payment } from '../../components'
+import { TotalSum } from "../../components/TotalSum";
+
 import './styles.scss'
-import { GlobalContext } from '../../utils/GlobalContext'
 
 export const Home = () => {
-	const { isReviewOpen } = useContext(GlobalContext)
 	return (
-		<div className='home'>
+		<div className='home' >
 			<SavingCard />
 			<Tips />
-			<Rate />
-			{isReviewOpen && <Review />}
+			<TotalSum />
 			<Payment />
-			<SaveNatural />
-		</div>
+		</div >
 	)
 }

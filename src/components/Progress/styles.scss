@@ -1,0 +1,12 @@
+.progress {
+  overflow: hidden;
+  height: 4px;
+  border-radius: var(--border-1);
+  background: var(--white);
+
+  & > div {
+    height: 100%;
+    background: var(--main-dark);
+    border-radius: inherit;
+  }
+}
