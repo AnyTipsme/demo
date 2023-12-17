@@ -1,20 +1,23 @@
-import { createHashRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import { Provider } from './utils/GlobalContext'
 
-import { Home, Success } from './pages'
-import { Heading } from './components'
+import { CheckoutForm, Home, Return } from './pages'
 
 import './styles/index.scss'
 
-const router = createHashRouter([
+const router = createBrowserRouter([
 	{
 		path: '*',
 		element: <Home />
 	},
 	{
-		path: '/success',
-		element: <Success />
+		path: '/checkout',
+		element: <CheckoutForm />
+	},
+	{
+		path: '/return',
+		element: <Return />
 	}
 ])
 
@@ -22,7 +25,6 @@ function App() {
 	return (
 		<Provider >
 			<div className='main-container' >
-				<Heading />
 				<RouterProvider router={router} />
 			</div >
 		</Provider >

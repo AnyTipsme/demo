@@ -13,7 +13,7 @@ export const Payment = memo(() => {
 	return (
 		<div className={'payment'} >
 			<Frame className='payment' >
-				<Button bold filled onClick={() => {navigate('/success')}}>{'Pay'}</Button >
+				<Button bold filled onClick={() => navigate('/checkout')} >{'Pay'}</Button >
 				<PoweredBy />
 			</Frame >
 		</div >
