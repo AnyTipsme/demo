@@ -18,7 +18,7 @@ export const CheckoutForm = () => {
 			headers: {
 				"Content-Type": "application/json",
 			},
-			body: JSON.stringify({amount: totalSum*100, currency: 'eur', productName: 'Tip'}),
+			body: JSON.stringify({amount: totalSum, currency: 'eur', productName: 'Tip'}),
 		})
 			.then((res) => res.json())
 			.then((data) => setClientSecret(data.clientSecret));
