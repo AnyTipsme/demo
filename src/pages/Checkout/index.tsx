@@ -5,11 +5,15 @@ import { API_URL, STRIPE_PK } from "../../consts.ts";
 import { GlobalContext } from "../../utils/GlobalContext.tsx";
 
 import { EmbeddedCheckout, EmbeddedCheckoutProvider } from "@stripe/react-stripe-js";
+import { Heading } from "../../components";
+
+import PhotoPng from "../../assets/photo.png";
 
 const stripePromise = loadStripe(STRIPE_PK);
 
 export const CheckoutForm = () => {
 	const [clientSecret, setClientSecret] = useState('');
+	const [isComplete, setIsComplete] = useState(false);
 	const {totalSum} = useContext(GlobalContext);
 
 	useEffect(() => {
@@ -25,15 +29,29 @@ export const CheckoutForm = () => {
 	}, []);
 
 	return (
-		<div id="checkout" >
-			{clientSecret && (
-				<EmbeddedCheckoutProvider
-					stripe={stripePromise}
-					options={{clientSecret}}
-				>
-					<EmbeddedCheckout />
-				</EmbeddedCheckoutProvider >
-			)}
-		</div >
+		<>
+			{isComplete
+				? <>
+					<Heading />
+					<div className='page-content success-page' >
+						<div className='thank-you' >Thank</div >
+						<div className='success-mark' >
+							<img src={PhotoPng} alt='photo of man' />
+						</div >
+					</div >
+				</>
+				: <div id="checkout" >
+					{clientSecret && (
+						<EmbeddedCheckoutProvider
+							stripe={stripePromise}
+							options={{clientSecret, onComplete: () => setIsComplete(true)}}
+						>
+							<EmbeddedCheckout />
+						</EmbeddedCheckoutProvider >
+					)}
+				</div >
+			}
+		</>
+
 	)
 }

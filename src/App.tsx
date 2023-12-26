@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createHashRouter, RouterProvider } from 'react-router-dom'
 
 import { Provider } from './utils/GlobalContext'
 
@@ -6,7 +6,7 @@ import { CheckoutForm, Home, Return } from './pages'
 
 import './styles/index.scss'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
 	{
 		path: '*',
 		element: <Home />

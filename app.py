@@ -36,7 +36,8 @@ def create_checkout_session():
             ],
             mode='payment',
             payment_intent_data={'transfer_data': {"amount": tax, "destination": 'acct_1OKJeYIcB2gw0M83'}},
-            return_url=YOUR_DOMAIN + '/return?session_id={CHECKOUT_SESSION_ID}',
+#             return_url=YOUR_DOMAIN + '/return?session_id={CHECKOUT_SESSION_ID}',
+            redirect_on_completion='never',
         )
     except Exception as e:
         return str(e)
