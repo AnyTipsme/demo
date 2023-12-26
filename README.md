@@ -40,3 +40,11 @@ All python dependencies are stored in `requirements.txt` file. Open terminal in 
 ```
 pip install -r requirements.txt
 ```
+
+For deploy update `.env.production` file with real values, vite will insert then on `build` creation:
+
+```
+VITE_STRIPE_PUBLISHABLE_KEY="Publishable key from stripe site"
+
+VITE_API_URL="Back-end url (demo back-end by deafault will run at http://localhost:4242)"
+```
