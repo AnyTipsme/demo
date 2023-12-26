@@ -34,7 +34,7 @@ def create_checkout_session():
         payment_intent_data = {
             'transfer_data': {
                 "amount": tax,
-                "destination": 'acct_1OKJeYIcB2gw0M83'
+                "destination": 'acct_1OKIBgINS7Rvve2N'
             }
         }
         return_url = DOMAIN + '/return?session_id={CHECKOUT_SESSION_ID}'
