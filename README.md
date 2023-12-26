@@ -1,27 +1,12 @@
-# React + TypeScript + Vite
+## DOMAIN
+    в src/app.py нужно указать адрес клиента через переменную DOMAIN
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## env
+    сюда src/.env нужно положить ключить
+    например:
+    STRIPE_PUBLISHABLE_KEY="pk_test_51OJuJWEZu7v0quPkMZ4TdA2yUbi18NzyiU0jVglAJW959YsArR8eOkxcT1TvLqcI3arB8YoirSabmE1liruSep8d00pU7iq2t7"
+    STRIPE_SECRET_KEY="rk_test_51OJuJWEZu7v0quPkwPWiuvUwf9jGjCFSd7IwkZz8Vm4b2fuRLlGxkoV2w77lg2FJSiTicy4Phs8MrkbBcXTfgbDI00MoAVjx2w"
+    STRIPE_WEBHOOK_SECRET="whsec_dbbe65233cfe827bca67a6c391999d1a422e6e1f9f4fac71587c4baf128425a8"
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## start app
+    docker-compose up 

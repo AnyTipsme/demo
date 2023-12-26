@@ -1,0 +1,12 @@
+version: '3'
+services:
+  stripe_app:
+   build:
+     context: src
+   ports:
+     - 4242:4242
+   environment:
+     - PYTHONPATH=src
+   restart: always
+   volumes:
+     - ./src:/stripe_app
