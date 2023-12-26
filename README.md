@@ -26,7 +26,7 @@ If you are developing a production application, we recommend updating the config
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
-To get working demo provide `.env` file in the root of the project:
+To get working demo provide `.env` file in the root of the project and type in terminal `npm run demo`:
 
 ```
 VITE_STRIPE_PUBLISHABLE_KEY="Publishable key from stripe site"
